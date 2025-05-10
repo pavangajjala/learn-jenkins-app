@@ -134,7 +134,8 @@ pipeline {
                     netlify status
                     netlify link --id=$NETLIFY_SITE_ID
                     netlify deploy --dir=build --prod
-                    npx playwright test --reporter=html --project=chromium --grep "prod"
+                    sed -i "s|page.goto('/');|page.goto('https://unrivaled-melba-e685e7.netlify.app');|g" e2e/app.spec.js
+                    npx playwright test --reporter=html
                 '''
             }
 
