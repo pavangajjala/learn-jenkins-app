@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NETLIFY_SITE_ID = 'YOUR NETLIFY SITE ID'
+        NETLIFY_SITE_ID = 'de5cd3e7-1667-4c65-970a-f4ef2def0341'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
         REACT_APP_VERSION = "1.0.$BUILD_ID"
     }
@@ -123,7 +123,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'YOUR NETLIFY SITE URL'
+                CI_ENVIRONMENT_URL = 'unrivaled-melba-e685e7.netlify.app'
             }
 
             steps {
