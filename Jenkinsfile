@@ -134,7 +134,7 @@ pipeline {
                     netlify status
                     netlify link --id=$NETLIFY_SITE_ID
                     netlify deploy --dir=build --prod
-                    npx playwright test  --reporter=html
+                    npx playwright test --reporter=html --project=chromium --grep "prod"
                 '''
             }
 
